@@ -2,7 +2,7 @@ Market Pulse - Real-Time Stock Analysis Dashboard
 
 A modern, feature-rich stock market analysis application that provides real-time insights, news sentiment analysis, and AI-powered price predictions in a beautiful, responsive dashboard.
 
-![image](https://github.com/user-attachments/assets/c741fc92-f9c6-4caf-8365-39dc843aefdb)
+![image](https://github.com/user-attachments/assets/9679d5cc-6bc2-43d7-982d-fb136135be19)
 
 
  Features
