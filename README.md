@@ -1,76 +1,88 @@
-# Market Pulse 📈
+Market Pulse - Real-Time Stock Analysis Dashboard
 
-A modern, real-time stock analysis web application that helps users analyze stock performance by entering ticker symbols. Market Pulse provides comprehensive insights including real-time stock data, historical price charts, news sentiment analysis, and intelligent stock health indicators.
+A modern, feature-rich stock market analysis application that provides real-time insights, news sentiment analysis, and AI-powered price predictions in a beautiful, responsive dashboard.
 
-## ✨ Features
+![image](https://github.com/user-attachments/assets/9679d5cc-6bc2-43d7-982d-fb136135be19)
 
-### 📊 Real-Time Stock Data
-- Current stock price and daily change
-- High/low prices for the day
-- Trading volume
-- Percentage change with visual indicators
 
-### 📈 Historical Price Analysis
-- Interactive 30-day price chart using Recharts
+ Features
+
+# Real-Time Stock Data
+- Live stock prices and market data
+- Historical price charts (30-day view)
+- Volume analysis and price trends
+- Real-time price changes and percentages
+
+![image](https://github.com/user-attachments/assets/5ae988bc-7262-4a69-a4b7-59a871eb3add)
+
+
+# AI-Powered Price Predictions
+- Machine Learning price predictions for 1 day, 1 week, and 1 month
+- Confidence levels and risk assessments
+- Trend analysis (bullish/bearish/neutral)
+- Key factors influencing predictions
+
+  ![image](https://github.com/user-attachments/assets/75c8de5c-4643-4b08-9dc2-143d890b73e1)
+
+
+# News Sentiment Analysis
+- Real-time news aggregation
+- AI-powered sentiment analysis (positive/negative/neutral)
+- News source tracking and timestamps
+- Sentiment-based stock health indicators
+
+  ![image](https://github.com/user-attachments/assets/ab6c8975-338b-46de-886b-42aa07b534e0)
+
+
+# Stock Health Indicators
+- Comprehensive health scoring system
 - Price trend analysis
-- High/low/average price statistics
-- Responsive chart with tooltips
+- Volume activity monitoring
+- News sentiment impact
+- Interactive status buttons (Buy/Watch/Avoid)
 
-### 📰 News & Sentiment Analysis
-- Recent news headlines related to the stock
-- Basic sentiment analysis (positive, negative, neutral)
-- Sentiment classification using keyword analysis
-- News source attribution and timestamps
+  ![image](https://github.com/user-attachments/assets/57aded8c-889c-4461-aa27-cf7cc8305e96)
 
-### 🎯 Stock Health Indicator
-- Intelligent analysis combining multiple factors:
-  - Price trend direction (rising/falling/stable)
-  - News sentiment analysis
-  - Volume activity levels
-- Provides actionable recommendations: **Buy**, **Watch**, or **Avoid**
-- Confidence percentage for each recommendation
+# Dark Mode Support
+- Beautiful dark/light theme toggle
+- Persistent user preferences
+- Smooth theme transitions
+- Optimized for all lighting conditions
 
-### 🎨 Modern UI/UX
-- Responsive design that works on all devices
-- Beautiful gradient background with glassmorphism effects
-- Color-coded elements (green for positive, red for negative)
-- Smooth animations and hover effects
-- Clean, intuitive interface
+  ![image](https://github.com/user-attachments/assets/5268a364-897e-4f4f-b67d-25d8e4cda34b)
 
-## 🚀 Live APIs Used
+  ![image](https://github.com/user-attachments/assets/53f6bdf1-5c49-4ee3-9172-d0f3ed53850b)
 
-### Financial Data
-- **Alpha Vantage API**: Real-time stock quotes and historical data
-  - Global Quote endpoint for current stock data
-  - Time Series Daily for historical price data
+  ![image](https://github.com/user-attachments/assets/84068a41-d83e-40f4-934a-b7c51b768d42)
 
-### News Data
-- **NewsAPI**: Recent news headlines and articles
-  - Everything endpoint for comprehensive news search
-  - Filtered by stock ticker and language
+  ![image](https://github.com/user-attachments/assets/7797192f-1936-4105-91fc-a8a3bd7753b4)
 
-### Sentiment Analysis
-- **Custom Implementation**: Basic keyword-based sentiment analysis
-  - Positive keywords: surge, jump, rise, gain, growth, profit, etc.
-  - Negative keywords: fall, drop, decline, loss, weak, crash, etc.
-  - Neutral classification for balanced content
 
-## 🛠️ Technology Stack
 
-- **Frontend**: React 18 with TypeScript
-- **Styling**: CSS3 with modern features (Grid, Flexbox, CSS Variables)
-- **Charts**: Recharts for interactive data visualization
-- **Icons**: Lucide React for beautiful, consistent icons
-- **HTTP Client**: Axios for API requests
-- **Build Tool**: Create React App
 
-## 📦 Installation & Setup
+# Responsive Design
+- Mobile-first responsive layout
+- Optimized for all screen sizes
+- Touch-friendly interface
+- Modern glassmorphism design
 
-### Prerequisites
-- Node.js (v14 or higher)
+# Technology Stack
+
+- Frontend: React 18 + TypeScript
+- Styling: CSS3 with modern design patterns
+- Icons: Lucide React
+- Charts: Recharts
+- APIs: Alpha Vantage (stock data), NewsAPI (news)
+- State Management: React Context API
+- Build Tool: Create React App
+
+# Getting Started
+
+# Prerequisites
+- Node.js (v16 or higher)
 - npm or yarn package manager
 
-### Quick Start
+# Installation
 
 1. **Clone the repository**
    ```bash
@@ -83,138 +95,147 @@ A modern, real-time stock analysis web application that helps users analyze stoc
    npm install
    ```
 
-3. **Start the development server**
-   ```bash
-   npm start
-   ```
-
-4. **Open your browser**
-   Navigate to `http://localhost:3000`
-
-### Production Build
-```bash
-npm run build
-```
-
-## 🔧 API Configuration
-
-The application uses demo API keys by default. For production use, you should:
-
-1. **Get API Keys**:
-   - [Alpha Vantage](https://www.alphavantage.co/support/#api-key) - Free tier available
-   - [NewsAPI](https://newsapi.org/register) - Free tier available
-
-2. **Configure Environment Variables**:
+3. **Set up environment variables**
    Create a `.env` file in the root directory:
    ```env
    REACT_APP_ALPHA_VANTAGE_API_KEY=your_alpha_vantage_key
    REACT_APP_NEWS_API_KEY=your_news_api_key
+   REACT_APP_ALPHA_VANTAGE_BASE_URL=https://www.alphavantage.co/query
+   REACT_APP_NEWS_API_BASE_URL=https://newsapi.org/v2
    ```
 
-3. **Update API Service**:
-   Modify `src/services/api.ts` to use environment variables:
-   ```typescript
-   const ALPHA_VANTAGE_API_KEY = process.env.REACT_APP_ALPHA_VANTAGE_API_KEY || 'demo';
-   const NEWS_API_KEY = process.env.REACT_APP_NEWS_API_KEY || 'demo';
+4. **Get API Keys**
+   - **Alpha Vantage**: Sign up at [alphavantage.co](https://www.alphavantage.co/support/#api-key) (free tier available)
+   - **NewsAPI**: Sign up at [newsapi.org](https://newsapi.org/register) (free tier available)
+
+5. **Start the development server**
+   ```bash
+   npm start
    ```
 
-## 📱 Usage
+6. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-1. **Enter Stock Ticker**: Type a valid stock symbol (e.g., AAPL, TSLA, MSFT, GOOGL)
-2. **Click Analyze**: The app will fetch real-time data from multiple APIs
-3. **Review Results**: 
-   - Check current stock price and daily performance
-   - View the 30-day price chart
-   - Read recent news with sentiment analysis
-   - See the stock health recommendation
+# How to Use
 
-## 🎯 Stock Health Algorithm
+# Searching for Stocks
+1. Enter a stock ticker symbol (e.g., AAPL, TSLA, GOOGL)
+2. Click "Search" or press Enter
+3. View comprehensive analysis results
 
-The application uses a sophisticated algorithm to determine stock health:
+# Understanding the Dashboard
 
-### Factors Considered:
-1. **Price Trend** (7-day analysis)
-   - Rising: Positive indicator
-   - Falling: Negative indicator
-   - Stable: Neutral indicator
+# Stock Information Card
+- Current price and 24h change
+- High/low prices and volume
+- Price trend indicators
 
-2. **News Sentiment** (Recent headlines)
-   - Positive sentiment: Favorable indicator
-   - Negative sentiment: Concerning indicator
-   - Neutral sentiment: Balanced indicator
+# Stock Health Indicator
+- Overall health score with confidence level
+- Interactive status button (Buy/Watch/Avoid)
+- Detailed metrics breakdown
 
-3. **Volume Activity**
-   - High volume: Increased volatility/interest
-   - Low volume: Reduced activity
-   - Medium volume: Normal trading activity
+#### **ML Price Prediction**
+- AI-powered price forecasts
+- Multiple timeframes (1 day, 1 week, 1 month)
+- Confidence levels and risk assessments
+- Key influencing factors
 
-### Recommendations:
-- **Buy**: Positive price trend + positive news sentiment
-- **Watch**: Mixed signals or neutral indicators
-- **Avoid**: Negative price trend + negative news sentiment
+# Price History Chart
+- Interactive 30-day price chart
+- Hover tooltips with detailed information
+- Responsive design
 
-## 🔍 Example Stock Tickers
+# News & Sentiment
+- Latest news articles
+- Sentiment analysis for each article
+- Direct links to full articles
 
-Try these popular stocks to test the application:
-- **AAPL** - Apple Inc.
-- **TSLA** - Tesla Inc.
-- **MSFT** - Microsoft Corporation
-- **GOOGL** - Alphabet Inc.
-- **AMZN** - Amazon.com Inc.
-- **META** - Meta Platforms Inc.
-- **NVDA** - NVIDIA Corporation
-- **NFLX** - Netflix Inc.
+### 🌙 **Dark Mode**
+- Click the sun/moon icon in the top-right corner
+- Theme preference is automatically saved
+- Smooth transitions between themes
 
-## 🎨 Design Features
+# Project Structure
 
-### Color Scheme
-- **Primary Blue**: #3b82f6 (Interactive elements)
-- **Success Green**: #16a34a (Positive indicators)
-- **Error Red**: #dc2626 (Negative indicators)
-- **Neutral Gray**: #6b7280 (Neutral indicators)
+```
+market-pulse/
+├── src/
+│   ├── components/
+│   │   ├── ChartCard.tsx          # Price history charts
+│   │   ├── DarkModeToggle.tsx     # Theme toggle component
+│   │   ├── Header.tsx             # App header
+│   │   ├── HealthIndicator.tsx    # Stock health analysis
+│   │   ├── NewsCard.tsx           # News and sentiment
+│   │   ├── PricePrediction.tsx    # ML price predictions
+│   │   ├── StockAnalyzer.tsx      # Main dashboard
+│   │   └── StockCard.tsx          # Stock information
+│   ├── contexts/
+│   │   └── ThemeContext.tsx       # Dark mode context
+│   ├── services/
+│   │   └── api.ts                 # API integration
+│   ├── types/
+│   │   └── stock.ts               # TypeScript interfaces
+│   ├── App.tsx                    # Main app component
+│   ├── App.css                    # Global styles
+│   └── index.tsx                  # App entry point
+├── public/                        # Static assets
+├── .env                           # Environment variables
+└── package.json                   # Dependencies
+```
 
-### Visual Elements
-- Glassmorphism cards with backdrop blur
-- Gradient backgrounds
-- Smooth hover animations
-- Responsive grid layouts
-- Icon-based navigation
+# Available Scripts
 
-## 📊 Performance Features
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App (one-way operation)
 
-- **Parallel API Calls**: Fetches all data simultaneously
-- **Error Handling**: Graceful fallbacks for API failures
-- **Loading States**: Clear feedback during data fetching
-- **Responsive Design**: Optimized for all screen sizes
-- **TypeScript**: Type safety and better development experience
+# Key Features Explained
+
+# ML Price Predictions
+The app uses a sophisticated algorithm that analyzes:
+- Historical price patterns
+- Volatility calculations
+- Trend analysis
+- Market sentiment correlation
+
+# Sentiment Analysis
+News articles are analyzed for:
+- Positive/negative keywords
+- Market impact assessment
+- Sentiment scoring
+- Trend correlation
+
+# Stock Health Scoring
+Comprehensive health assessment based on:
+- Price momentum
+- Volume analysis
+- News sentiment
+- Technical indicators
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
+# Acknowledgments
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- [Alpha Vantage](https://www.alphavantage.co/) for financial data APIs
-- [NewsAPI](https://newsapi.org/) for news data
+- [Alpha Vantage](https://www.alphavantage.co/) for stock market data
+- [NewsAPI](https://newsapi.org/) for news aggregation
+- [Lucide React](https://lucide.dev/) for beautiful icons
 - [Recharts](https://recharts.org/) for chart components
-- [Lucide](https://lucide.dev/) for beautiful icons
 
-## 📞 Support
+# Support
 
 If you encounter any issues or have questions:
-1. Check the browser console for error messages
-2. Verify your API keys are correctly configured
-3. Ensure you're using a valid stock ticker symbol
-4. Check your internet connection
+- Open an issue on GitHub
+- Check the documentation above
+- Ensure your API keys are properly configured
 
 ---
 
-**Note**: This application is for educational and informational purposes only. It should not be considered as financial advice. Always do your own research before making investment decisions. 
+**Built with ❤️ using React and TypeScript**
