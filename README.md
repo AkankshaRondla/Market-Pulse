@@ -51,8 +51,6 @@ A modern, feature-rich stock market analysis application that provides real-time
 
   ![image](https://github.com/user-attachments/assets/5268a364-897e-4f4f-b67d-25d8e4cda34b)
 
-  ![image](https://github.com/user-attachments/assets/b8b6a05c-6c06-4ca2-ac64-d332c9df9f91)
-
   ![image](https://github.com/user-attachments/assets/53f6bdf1-5c49-4ee3-9172-d0f3ed53850b)
 
   ![image](https://github.com/user-attachments/assets/84068a41-d83e-40f4-934a-b7c51b768d42)
